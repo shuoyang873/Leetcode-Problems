@@ -6,7 +6,7 @@
 
 //我第一次的代码：（采用前缀和的方法，暴力枚举每个区间，进行减法，判断是否是k的倍数，对于较大的输入会超时）
 
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 int main()
 {
@@ -28,4 +28,25 @@ int main()
   }
   cout<<cnt<<endl;
   return 0;
+}*/
+
+
+//正确的代码：（采用前缀和以及数学原理：同余数的两个前缀和相减，得到的数一定是k的倍数，也就可以直接统计数目）
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main(){
+    int n,k;
+    cin>>n>>k;
+    long long cnt[100001]={1},sum=0,ans=0;
+    for(int i=0;i<n;i++){
+        int x;
+        cin>>x;
+        sum+=x;
+        ans+=cnt[sum%k];
+        cnt[sum%k]++;
+    }
+    cout<<ans<<endl;
+    return 0;
 }
