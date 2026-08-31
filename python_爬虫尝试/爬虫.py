@@ -46,5 +46,7 @@ print(response.status_code)      #这边是输出网址的状态码，200表示�
 #可以用requests.ok判断访问网址是否成功
 if response.ok:
     print(response.status_code)
+
+    print(response.text)    #这个是打印出response的网址的源码
 else:
     print("错误")
