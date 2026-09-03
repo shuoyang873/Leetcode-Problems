@@ -60,13 +60,14 @@ using namespace std;
 class Solution {
 public:
     int maxDepth(TreeNode* root) {               //采用广度优先搜索来解决
-        if(root==nullptr)return 0;               //对于链表题，第一件要做的事情就是判断头节点是否是空
+        if(root==nullptr)return 0;               //对于链表题，第一件要做的事情就是判断头节点是否是空!!!!!!!!!!
         int ans=0;
         queue<TreeNode*>q;                      //这里声明一个专门用来存放TreeNode节点的队列
         q.push(root);                           //先把根节点放入队列中
         while(!q.empty()){                      //如果队列非空，那么说明还有节点需要处理
             int sz=q.size();                    //这边先记录在这一层的节点数，方便后面处理
             while(sz>0){                        //循环处理当前这一层的节点
+                                                //这边的sz的循环条件是>0，而不是>=0，否则会越界访问
                 TreeNode*node=q.front();        //把当前这一层的节点先记录下来，然后弹出
                 q.pop();
                 if(node->left)q.push(node->left);         //如果该节点的左节点非空，那么压入队列中
