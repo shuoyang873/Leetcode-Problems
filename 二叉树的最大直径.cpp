@@ -53,16 +53,16 @@ using namespace std;
 public:
     int ans=1;
     int depth(TreeNode*root){
-        if(root==nullptr)return 0;
-        int l=depth(root->left);
+        if(root==nullptr)return 0;       //递归出口：节点为空
+        int l=depth(root->left);         //这边计算得到的是每个节点的左右两边的最大节点数，不是边的数量
         int r=depth(root->right);
         int len=l+r+1;
         ans=max(ans,len);
-        return max(l,r)+1;
+        return max(l,r)+1;               //返回当前该节点的最大深度
     }
     int diameterOfBinaryTree(TreeNode* root) {
-        if(root==nullptr)return 0;
+        if(root==nullptr)return 0;      //这边要先检查头节点是否为空
         depth(root);
-        return ans-1;
+        return ans-1;                   //因为边的数量等于节点的数量-1，所以最后答案要-1
     }
 };
