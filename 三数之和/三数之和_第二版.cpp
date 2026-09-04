@@ -60,10 +60,12 @@ public:
                 if(nums[l]+nums[r]==target){           //如果等于target，那么说明得到了答案
                     ans.push_back({nums[i],nums[l],nums[r]});         //将答案存入ans数组
                     l++;                          //存完之后记得要移动指针
-                    r--;
+                    r--;                          //这个双指针比较，得到答案之后，先移动指针，然后再比较
                     while(l<r&&nums[l]==nums[l-1])l++;        //同时要用一个循环，判断当前的数字是否等于刚才的数字，防止出现重复答案
                     while(l<r&&nums[r]==nums[r+1])r--;           //循环的条件仍然是l<r
-                }
+                }                                   
+                //双指针的题目，必须要保证左指针一直都在右指针的左侧，所以循环时必须加上这个条件判断l<r
+                
                 else if(nums[l]+nums[r]<target){
                     l++;                              //如果两数之和小于target，那么说明数字过小，那么就要让左指针向右移动，增大数值
                 }
