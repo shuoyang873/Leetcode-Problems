@@ -49,8 +49,6 @@ premium lock icon
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-// Definition for a Node.
 class Node {
 public:
     int val;
@@ -68,7 +66,6 @@ public:
         next = _next;
     }
 };
-*/
 
 class Solution {
 public:
