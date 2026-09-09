@@ -12,7 +12,7 @@ struct Edge {
 int head[1000], num_edge = 0;
 
 void add_edge(int from, int to, int dis) {
-	edge[++num_edge].next = head;
+	edge[++num_edge].next = head[from];
 	edge[num_edge].to = to;
 	edge[num_edge].dis = dis;
 	head[from] = num_edge;
