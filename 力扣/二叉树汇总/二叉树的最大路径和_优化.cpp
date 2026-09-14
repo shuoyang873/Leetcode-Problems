@@ -60,11 +60,11 @@ public:
     int max_sum=-1e9;
     int find_max_path_sum(TreeNode*root,int sum){
         if(root==nullptr)return 0;
-        int left_sum=find_max_path_sum(root->left,sum)+root->val;
-        int right_sum=find_max_path_sum(root->right,sum)+root->val;
-        max_sum=max(max(left_sum,right_sum),max(max_sum,left_sum+right_sum-root->val));
-        max_sum=max(max_sum,root->val);
-        return max(max(left_sum,right_sum),root->val);
+        int left_sum=max(find_max_path_sum(root->left,sum),0);
+        int right_sum=max(find_max_path_sum(root->right,sum),0);
+        int priceNewpath=root->val+left_sum+right_sum;
+        max_sum=max(priceNewpath,max_sum);
+        return root->val+max(left_sum,right_sum);
     }
     int maxPathSum(TreeNode* root) {
         find_max_path_sum(root,0);
