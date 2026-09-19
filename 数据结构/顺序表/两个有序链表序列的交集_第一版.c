@@ -23,13 +23,14 @@
 #include<math.h>              //第一次是因为数组开的太小，然后改成static之后因为数据量过大，导致运行超时，这道题用c语言的解法是自己手搓哈希表
 
 int main() {
+    //这边学到的一个点就是如果数组开的太小，会导致栈溢出，但是可以通过使用static来解决
 	int* nums1 = (int*)malloc(1000001 * sizeof(int)), * nums2 = (int*)malloc(1000001 * sizeof(int)), (*sort1)[2] = (int(*)[2])malloc(1000001 * sizeof(int[2])), (*sort2)[2] = (int(*)[2])malloc(1000001 * sizeof(int[2]));
 	int cnt1 = 0, cnt2 = 0;
 	int v;
 	scanf_s("%d", &v);
 	while (v != -1) {
 		nums1[++cnt1] = v;
-		scanf_s("%d", &v);
+		scanf_s("%d", &v);              //还有要注意的点就是输入的数据可能为空，所以要提前判断，否则可能会访问到无效数据，导致错误
 	}
 	scanf_s("%d", &v);
 	while (v != -1) {
