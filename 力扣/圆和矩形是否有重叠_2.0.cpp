@@ -39,6 +39,7 @@ premium lock icon
 
 
 #include<bits/stdc++.h>
+#include<algorithm>
 using namespace std;
 
 
@@ -46,8 +47,8 @@ class Solution {
 public:
     bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {
         //这边采用clamp这个函数，直接找到圆心到矩形的最近点的水平和竖直距离
-        int dis_x=clamp(xCenter,x1,x2)-xCenter;
-        int dis_y=clamp(yCenter,y1,y2)-yCenter;
+        int dis_x=std::clamp(xCenter,x1,x2)-xCenter;
+        int dis_y=std::clamp(yCenter,y1,y2)-yCenter;
         return radius*radius>=dis_x*dis_x+dis_y*dis_y;     //直接通过距离和r的关系来判断是否与矩形有重叠
     }
 };
