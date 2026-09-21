@@ -49,7 +49,7 @@ using namespace std;
      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  };
 
-
+//这段代码的思路是对的，但是因为使用了多次递归，导致超时，所以最好的解决方法是采用一次递归，然后就将值记录下来，不要进行再次递归
  class Solution {
 public:
     int max_len=0;
