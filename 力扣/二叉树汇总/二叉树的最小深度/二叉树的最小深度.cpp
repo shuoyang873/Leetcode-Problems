@@ -52,6 +52,7 @@ public:
             return 1;
         }
         int len_l,len_r;
+        //下面这个左右结点判空一定要加，防止出现一条单侧链的情况，那样会得到1
         if(root->left)len_l=dfs(root->left);             //这边是计算左侧子树的最小深度
         if(root->right)len_r=dfs(root->right);           //这边是计算右侧子树的最小深度
         return min(len_l,len_r)+1;                     //取二者的较小值，并+1
