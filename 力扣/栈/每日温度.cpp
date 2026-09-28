@@ -42,7 +42,7 @@ public:
         //像这种找到下一个符合条件的元素的题目，可以考虑使用单调栈
         //如果要找下一个更大的数，那么使用递减单调栈，如果要找下一个更小的数，那么使用递增单调栈
         int n=temperatures.size();
-        stack<int>stk;
+        stack<int>stk;               //这个stk是用来记录递减栈中的每个元素的下标
         vector<int>vc(n,0);            //用来记录每个位置的答案
         for(int i=0;i<n;i++){
             while(!stk.empty()&&temperatures[i]>temperatures[stk.top()]){     //如果当前位置的温度大于栈里面存储的温度，那么说明找到了第一个更大的温度
