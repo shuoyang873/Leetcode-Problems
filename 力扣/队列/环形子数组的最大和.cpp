@@ -44,6 +44,7 @@ using namespace std;
 class Solution {
 public:
     int maxSubarraySumCircular(vector<int>& nums) {     //这边采用前缀和+单调队列来写
+    //这边采用循环两次的方法来遍历数组，完成了循环数组的功能，这点我在一开始就有想到，但是后面用单调队列来计算和，这个是我没有想到的
     //计算最大子数组和的方法有：1、动态规划，转移方程为dp[i]=max(dp[i-1]+nums[i],nums[i]);2、前缀和相减，可以得到对应区间的和
     //这道题要用前缀和配合单调队列来写是因为这个数组说要循环
         int pre=nums[0],res=nums[0];    //这边的pre用来记录前缀和，res用来记录最大的结果
