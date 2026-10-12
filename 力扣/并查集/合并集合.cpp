@@ -41,12 +41,12 @@ Yes
 */
 
 
-//这道题第一次写的时候基本没有问题，但是有两个很致命的bug
+
 #include<iostream>
 #include<algorithm>
 #include<vector>
 using namespace std;
-
+//这道题第一次写的时候基本没有问题，但是有两个很致命的bug
 int n, m;
 
 struct DSU {
