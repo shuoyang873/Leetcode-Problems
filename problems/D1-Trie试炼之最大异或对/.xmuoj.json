@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://xmuoj.com",
+  "problemId": 10138,
+  "contestId": 482,
+  "contestTitle": "2026年蓝桥杯集训队之高级数据结构",
+  "displayId": "D1",
+  "title": "Trie试炼之最大异或对",
+  "language": "C++",
+  "sourceFile": "main.cpp",
+  "sourceFiles": {
+    "C++": "main.cpp"
+  },
+  "status": "active",
+  "version": 2,
+  "identity": "http://xmuoj.com::10138",
+  "createdAt": "2026-10-22T15:41:32.540Z",
+  "updatedAt": "2026-10-22T15:41:32.540Z",
+  "lastOpenedAt": null
+}

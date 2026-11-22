@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://xmuoj.com",
+  "problemId": 10136,
+  "contestId": 482,
+  "contestTitle": "2026年蓝桥杯集训队之高级数据结构",
+  "displayId": "C4",
+  "title": "兔子与兔子",
+  "language": "C++",
+  "sourceFile": "main.cpp",
+  "sourceFiles": {
+    "C++": "main.cpp"
+  },
+  "status": "active",
+  "version": 2,
+  "identity": "http://xmuoj.com::10136",
+  "createdAt": "2026-10-22T15:11:21.590Z",
+  "updatedAt": "2026-10-22T15:11:21.590Z",
+  "lastOpenedAt": null
+}

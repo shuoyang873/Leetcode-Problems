@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://xmuoj.com",
+  "problemId": 10134,
+  "contestId": 482,
+  "contestTitle": "2026年蓝桥杯集训队之高级数据结构",
+  "displayId": "C2",
+  "title": "哈希试炼之字符串哈希",
+  "language": "C++",
+  "sourceFile": "main.cpp",
+  "sourceFiles": {
+    "C++": "main.cpp"
+  },
+  "status": "active",
+  "version": 2,
+  "identity": "http://xmuoj.com::10134",
+  "createdAt": "2026-10-20T15:05:31.463Z",
+  "updatedAt": "2026-10-20T15:05:31.463Z",
+  "lastOpenedAt": null
+}

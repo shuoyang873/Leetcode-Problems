@@ -50,6 +50,7 @@
 #include<algorithm>
 #include<vector>
 //这边采用多指针的方式来解决，每个质数都对应一个指针，这个指针指向的是该质数所要相乘的谦虚数（因为谦虚数是通过质数与质数，质数与谦虚数相乘得到的）
+//这边这个多指针的方法比小根堆的方法更好，小根堆的实现虽然代码和思路容易理解，但是他使用的set和小根堆priority_queue的开销更大，导致计算会超时
 using namespace std;
 int main() {
 	int n, k;
@@ -63,8 +64,10 @@ int main() {
 	}
 	for (int i = 1; i <= n; i++) {
 		long long min_val = 2e18;       //计算每个位置的谦虚数，要找到当前最小
+        //这边还有一个要注意的点就是这个min_val要开的足够大，不然会导致数据错误
 		for (int j = 0; j < k; j++) {
 			long long cur = (long long)h[p[j]] * prime[j];    //这个是计算当前质数和该质数指向的谦虚数的乘积
+            //还有就是这边计算的时候，这个h[p[j]]*prime[j]的结果要强制转为long long，不然会数据溢出导致错误
 			min_val = cur < min_val ? cur : min_val;          //取较小值进行更新
 		}
 		//因为这个质数数组里面的数据是从小到大进行排列，所以每次进行计算的时候，都是往大的方向走

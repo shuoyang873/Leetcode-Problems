@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://xmuoj.com",
+  "problemId": 10135,
+  "contestId": 482,
+  "contestTitle": "2026年蓝桥杯集训队之高级数据结构",
+  "displayId": "C3",
+  "title": "雪花雪花雪花",
+  "language": "C++",
+  "sourceFile": "main.cpp",
+  "sourceFiles": {
+    "C++": "main.cpp"
+  },
+  "status": "active",
+  "version": 2,
+  "identity": "http://xmuoj.com::10135",
+  "createdAt": "2026-10-22T13:14:53.885Z",
+  "updatedAt": "2026-10-22T13:14:53.885Z",
+  "lastOpenedAt": null
+}
